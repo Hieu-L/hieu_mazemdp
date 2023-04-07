@@ -50,7 +50,7 @@ class Mdp:
         if uniform:
             prob = np.ones(self.nb_states) / (self.nb_states)
             self.current_state = sample_categorical(prob)
-            while self.current_state in self.last_states :
+            while self.current_state in self.terminal_states :
                 prob = np.ones(self.nb_states) / (self.nb_states)
                 self.current_state = sample_categorical(prob)
         else:
